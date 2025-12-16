@@ -1,0 +1,20 @@
+First we have to connect to another database in order to chnage name of the on ewe want. we cannot chnage names on current db.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+test_db=# \c postgres
+You are now connected to database "postgres" as user "postgres".
+
+postgres=# ALTER DATABASE test_db RENAME TO db_test;
+ALTER DATABASE
+
+postgres=# \c test_db
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "test_db" does not exist
+Previous connection kept
+This happens because this name of db is not existing now.
+-----------------------------------------------------------------------------------------------------------------------------------
+
+postgres=# \c db_test
+You are now connected to database "db_test" as user "postgres".
+db_test=#
