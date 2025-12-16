@@ -1,0 +1,17 @@
+test_db=# CREATE TABLE test_123( id INT PRIMARY KEY, message VARCHAR(255) NOT NULL);
+CREATE TABLE
+
+test_db=# \dt
+
+            List of tables
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | test_123 | table | postgres
+(1 row)
+
+
+test_db=# DROP TABLE test_123;
+DROP TABLE
+test_db=# \dt
+Did not find any tables.
+test_db=#
